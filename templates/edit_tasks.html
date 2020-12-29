@@ -1,6 +1,7 @@
 {%extends 'index.html'%}
 
 {% block content %}
+<h1>add task</h1>
 <form method="POST">
 <div class="input-group mb-3">
     <div class="input-group-text">
@@ -20,25 +21,25 @@
     <div class="input-group-text">
       <input class="form-check-input" type="radio" value="" aria-label="Radio button for following text input">
     </div>
-    <input type="text" class="form-control" name="last_update" placeholder="last_update" aria-label="Text input with radio button">
+    <input type="text" class="form-control" name="priority" placeholder="priority" aria-label="Text input with radio button">
+  </div>
+  <div class="input-group mb-3" >
+    <div class="input-group-text">
+      <input class="form-check-input" type="radio" value="" aria-label="Radio button for following text input">
+    </div>
+    <input type="text" class="form-control" name="status" placeholder="status" aria-label="Text input with radio button">
   </div>
 
   <div class="input-group mb-3" >
     <div class="input-group-text">
       <input class="form-check-input" type="radio" value="" aria-label="Radio button for following text input">
     </div>
-    <input type="text" class="form-control" name="created_at" placeholder="created_at" aria-label="Text input with radio button">
+    <input type="text" class="form-control" name="description" placeholder="description" aria-label="Text input with radio button">
   </div>
 
-  <div class="input-group mb-3" >
-    <div class="input-group-text">
-      <input class="form-check-input" type="radio" value="" aria-label="Radio button for following text input">
-    </div>
-    <input type="text" class="form-control" name="lst" placeholder="Task" aria-label="Text input with radio button">
-  </div>
   
   <center><div class="col-12 mb-3">
-    <button class="btn btn-primary" type="submit" >Add </button>
+    <button class="btn btn-primary" type="submit" >Edit</button>
   </div></center>
 
   

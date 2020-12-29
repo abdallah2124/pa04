@@ -9,7 +9,9 @@
               <th scope="col">Name</th>
               <th scope="col">Last Update</th>
               <th scope="col">created_at</th>
-              <th scope="col">Task</th>
+              <th scope="col">status</th>
+              <th scope="col">priority</th>
+              <th scope="col">description</th>
             </tr>
           </thead>
           <tbody>
@@ -20,14 +22,24 @@
               <td>{{contact.last_updated}}</td>
               <td>{{contact.created_at}}</td>
               <td>
-                {%for task in contact.tasks%}
-                <a href="{{url_for('taskss')}}">{{task}}</a>
-                {%endfor%}
+                {{contact.status}}
               </td>
+              <td>{{contact.priority}}</td>
+              <td>{{contact.description}}</td>
+              {%endfor%}
              </tr>
-            {%endfor%}
             
           </tbody>
       </table>
+<br>
+
+      <div class="btn-group col-12 mb-3">
+        <a href="{{url_for('n_t')}}" class="btn btn-primary active" aria-current="page">Add Task</a>
+        <a href="{{url_for('d_t')}}" class="btn btn-primary">Dell Task</a>
+        <a href="{{url_for('e_t')}}" class="btn btn-primary">Edit Task</a>
+      </div>
+
+
+
 
 {%endblock%}
