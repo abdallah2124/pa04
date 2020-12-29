@@ -1,0 +1,29 @@
+{%extends 'index.html'%}
+
+{% block content %}
+
+<table class="table table-hover">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Last Update</th>
+              <th scope="col">created_at</th>
+              <th scope="col">Task</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%for id,contact in t.items()%}
+            <tr>
+              <th scope="row">{{id}}</th>
+              <td>{{contact.name}}</td>
+              <td>{{contact.last_updated}}</td>
+              <td>{{contact.created_at}}</td>
+              <td>{{contact.tasks}}</td>
+            </tr>
+            {%endfor%}
+            
+          </tbody>
+      </table>
+
+{%endblock%}
